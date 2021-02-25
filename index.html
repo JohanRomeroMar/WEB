@@ -6,17 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/index.css">
     <title>HTML Semantico</title>
+    <script src="/index.js"></script>
 </head>
 <body>
-   <form action="">
-       <input type="text" name="NameC" placeholder="Nombres y apellidos" required>
-       <input type="number" name="NumT" placeholder="Numero de telefono" required>
-       <input type="text" name="Address" placeholder="Dirección" required>
-       <input type="date" name="BornDt" required>
-       <input type="email" name="EmailAdd" placeholder="Correo electronico" required>
-       <input type="password" name="Password" placeholder="Contraseña" required>
-       <input type="password" name="PasswordCon" placeholder="Confirmar contraseña" required>
-       <input type="submit">
-   </form>
+    <div class="FormBox">
+        <h1>Registro</h1>
+        <form action="">
+            <input type="text" class="Name" name="NameC" placeholder="Nombres y apellidos" required>
+            <input type="number" class="PhoneNum" name="NumT" placeholder="Numero de telefono" required>
+            <input type="text" class="Address" name="Address" placeholder="Dirección" required>
+            <input type="date" class="BornDate" name="BornDt" required>
+            <input type="email" class="Email" name="EmailAdd" placeholder="Correo electronico" required>
+            <label for="Password" id="PasswordL"></label>
+            <input type="password" onkeyup="validarPass()" class="Pswd" id="Password" name="Password" placeholder="Contraseña" required>
+            <input type="password" onkeyup="validarPass()" class="Pswd" id="PasswordCon" name="PasswordCon" placeholder="Confirmar contraseña" required>
+            <button class="submit">Enviar</button>
+        </form>
+    </div>
+   
 </body>
 </html>
